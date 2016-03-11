@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="../jquery-peakzoom.js"></script>
+    <script>
+    $(function() {
+
+      // initialize
+      $('#outer-div').peakzoom();
+
+      $('input').click(function() {
+        $('#outer-div').trigger('peakzoom.rotate');
+      });
+    });
+    </script>
+    <style>
+      #outer-div {
+        width: 256px;
+        height: 192px;
+        overflow: hidden;
+        margin: auto;
+        box-shadow: rgba(0,0,0,.5) 0 0 4px;
+      }
+      #outer-div div {
+        line-height: 0;
+        transition-duration: 0.3s;
+      }
+      #outer-div img {
+        width: 256px;
+        height: 192px;
+        transition-duration: 0.3s;
+        transition-property: transform;
+        /* just for candy: */
+       }
+
+    </style>
+  </head>
+  <body>
+    <h1>Click or tap on the image to zoom</h1>
+    <input type="button" value="Rotate">
+    <div id="outer-div">
+      <div>
+        <img src="demo.jpeg">
+      </div>
+    </div>
+  </body>
+</html>
