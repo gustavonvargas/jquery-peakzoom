@@ -1,6 +1,7 @@
 /*!
   Tuomas Salo <tuomas.salo@iki.fi>
   license: MIT
+  Version: 0.0.1
 */
 (function($, window, undefined) {
   'use strict';
