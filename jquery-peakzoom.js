@@ -19,6 +19,9 @@
           $img.add($inner).css('transform', '');
           rotation = /* $container.data('peakzoom-rotation') || */ 0;
           scale = 1;
+          $container.on("dragstart", "img", function() {
+            return false;
+          });
         }
       ;
       
